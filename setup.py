@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="parallematx",
-    version="1.0",
+    version="1.0.1",
     description="Parallel Matrix Multiplication with ProcessPoolExecutor",
     package_dir={"": "src"},
     packages=find_packages(where="src"),
