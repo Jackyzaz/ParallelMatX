@@ -1,3 +1,9 @@
+# main package
 numpy
 matplotlib
 tqdm
+
+# build package tool
+setuptools
+wheel
+twine
