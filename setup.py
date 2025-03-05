@@ -20,6 +20,6 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Operating System :: OS Independent",
     ],
-    install_requires=["bson >= 0.5.10"],
+    install_requires=["bson >= 0.5.120"],
     python_requires=">=3.10",
 )

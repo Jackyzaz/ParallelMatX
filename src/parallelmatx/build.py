@@ -28,40 +28,29 @@ def parallel_matrix_multiplication(
     A: list | np.ndarray, B: list | np.ndarray, max_workers: int | None = None
 ) -> np.ndarray:
     """
-        Parallel matrix multiplication using ProcessPoolExecutor
+    Parallel matrix multiplication using ProcessPoolExecutor
 
-        Algorithm:
-            Computes cross product of matrix for improved performance
-
+    Algorithm:
+        Computes cross product of matrix for improved performance
 
     Complexity (assume square matrices of size n × n):
+        - Time Complexity:
+            - Worst Case (No Parallelism, max_workers = 1): O(n^3), equivalent to traditional matrix multiplication.
+            - Average Case (When max_workers is moderate ) : O(n^3/logn) ≈ O(n^2.5)
+            - Best Case (Full Parallelism, max_workers = n): O(n^2), where row computations are fully distributed.
+        - Space Complexity: O(n^2), as the final result matrix requires n^2 storage.
 
+    Args:
+        A (list | np.ndarray): The first matrix
+        B (list | np.ndarray): The second matrix
+        max_workers (int | None, optional): The maximum number of parallel processes.
+            Defaults to None, which lets Python decide the optimal number of processes.
 
+    Returns:
+        np.ndarray: The result of matrix multiplication A × B.
 
-            - Time Complexity:
-
-
-                - Worst Case (No Parallelism, max_workers = 1): O(n^3), equivalent to traditional matrix multiplication.
-
-
-                - Average Case (When max_workers is moderate ) : O(n^3/logn) ≈ O(n^2.5)
-
-
-                - Best Case (Full Parallelism, max_workers = n): O(n^2), where row computations are fully distributed.
-
-
-            - Space Complexity: O(n^2), as the final result matrix requires n^2 storage.
-        Args:
-            A (list | np.ndarray): The first matrix
-            B (list | np.ndarray): The second matrix
-            max_workers (int | None, optional): The maximum number of parallel processes.
-                Defaults to None, which lets Python decide the optimal number of processes.
-
-        Returns:
-            np.ndarray: The result of matrix multiplication A × B.
-
-        Raises:
-            ValueError: If the matrices have incompatible dimensions for multiplication.
+    Raises:
+        ValueError: If the matrices have incompatible dimensions for multiplication.
     """
     # Format input array
     A = np.array(A)
