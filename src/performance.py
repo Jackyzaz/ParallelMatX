@@ -18,7 +18,7 @@ def get_user_input(prompt, default):
     Returns:
         int: The user-provided or default integer value.
     """
-    user_input = input(f"{prompt} (Press Enter for default: {default}): ").strip()
+    user_input = input(f"{prompt} (default: {default}): ").strip()
     return int(user_input) if user_input.isdigit() else default
 
 
