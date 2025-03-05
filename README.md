@@ -30,8 +30,13 @@ if __name__ == "__main__": # Need main to run parallel
     A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
     B = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 
-    result = parallelmatx.cross_product(A, B)
+    result = parallelmatx.parallel_matrix_multiplication(A, B)
     print("Result:\n", result)
+
+    # result:
+    # [[ 30.  36.  42.]
+    # [ 66.  81.  96.]
+    # [102. 126. 150.]]
 ```
 
 ## How It Works
