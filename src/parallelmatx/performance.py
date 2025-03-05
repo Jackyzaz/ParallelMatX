@@ -112,7 +112,7 @@ def test_parallel_performance_with_different_workers(start_size, end_size, dista
     plt.show()
 
 
-if __name__ == "__main__":
+def performance():
     START_SIZE = 100
     MAX_SIZE = 500
     DISTANCE = 100
@@ -143,3 +143,7 @@ if __name__ == "__main__":
             break
         else:
             print("Invalid choice. Please enter 1, 2, or q.")
+
+
+if __name__ == "__main__":
+    performance()
