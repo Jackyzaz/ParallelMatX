@@ -111,5 +111,25 @@ def parallel_matrix_multiplication(
 ```
 
 ## Benchmarking
-### Testing traditional approch vs parallel approch
+You can run benchmark that I have provided on `src/parallelmatx/performance.py` you can chose options and select which range you want to test. However, pleas careful about range its may cause your computer lagging
 
+### 1. Testing traditional approch vs parallel approch
+
+We can take a look that in long range square matrix size from 100 to 1000. Its seem like on the start point parallel took slower than traditional approch because its more time to split & manage task. Also for retriving all answer 
+
+![481434274_533566232605712_3499873268860801680_n](https://github.com/user-attachments/assets/88f91a68-9164-4199-99e8-43d9609aa526)
+
+
+### 2. Testing max-workers 
+
+In ProcessPoolExcutor we can limit max-workers. However, In terms of optimization, It's not always better performance with more max-workers. 
+
+There some technical factor behind this
+
+1. Overhead of Process Creation and Management
+2. CPU Core Limitations
+3. Memory Bandwidth Bottleneck
+
+As you can see from the figure, incress number of max-workers don't have significant changes, So just leave your computer select how much max-workers
+
+![Figure_1](https://github.com/user-attachments/assets/0e99d172-63f9-4c5e-b65b-0a94bae736f2)
