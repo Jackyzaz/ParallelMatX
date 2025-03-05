@@ -66,32 +66,3 @@ def parallel_matrix_multiplication(
             result[i] = row.result()
 
     return result
-
-
-# Test cases
-def test_matrix_multiplication():
-    # Test Case 1: Simple square matrices
-    A1 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-    B1 = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
-    numpy_result1 = np.dot(A1, B1)
-    parallel_result1 = cross_product(A1, B1)
-
-    # Detailed comparison
-    print("Test Case 1 (Square Matrices):")
-    print("NumPy Result:\n", numpy_result1)
-    print("\nParallel Result:\n", parallel_result1)
-    print("\nResults Match:", np.array_equal(numpy_result1, parallel_result1))
-
-    # Test Case 2: Rectangular matrices
-    A2 = np.array([[1, 2], [3, 4], [5, 6]])
-    B2 = np.array([[1, 2, 3], [4, 5, 6]])
-    numpy_result2 = np.dot(A2, B2)
-    parallel_result2 = cross_product(A2, B2)
-    print("\n\nTest Case 2 (Rectangular Matrices):")
-    print("NumPy Result:\n", numpy_result2)
-    print("\nParallel Result:\n", parallel_result2)
-    print("\nResults Match:", np.array_equal(numpy_result2, parallel_result2))
-
-
-if __name__ == "__main__":
-    test_matrix_multiplication()
