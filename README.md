@@ -15,7 +15,7 @@ It utilizes parallel processing techniques to optimize performance, competible w
 To install ParallelMatX, use pip:
 
 ```
-pip install parallematx==1.0
+pip install parallematx
 ```
 
 ### Usage Example
