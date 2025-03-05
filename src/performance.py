@@ -12,9 +12,9 @@ def measure_time(func, A, B):
     return end - start
 
 
-def main():
+def test_performance_between_normal_and_parallel():
     START_SIZE = 100
-    MAX_SIZE = 1000
+    MAX_SIZE = 400
     DISTANCE = 100
 
     matrix_sizes = [x for x in range(START_SIZE, MAX_SIZE, DISTANCE)]
@@ -55,4 +55,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    test_performance_between_normal_and_parallel()
